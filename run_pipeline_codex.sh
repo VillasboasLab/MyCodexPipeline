@@ -61,9 +61,6 @@ mkdir -p $OUTPUT/{OMETIFF,SEGMASKS,QUPATH,REPORTS}
 ## Step 1: Generate OME.TIFF's
 python $WKFL/convertCodexDir2Ometiff.py -i $INPUT -o $OUTPUT/OMETIFF
 
-## QC 1: General non-Referenced Image Metrics
-python $WKFL/OMETIFF_QC_02.py --save_data --whole_slide -i "$OUTPUT/OMETIFF" -o "$OUTPUT/REPORTS"
-
 ## Segementation Setup: need to run just once.
 # /bin/bash $WKFL/build_deepcell_singularity.sh
 
